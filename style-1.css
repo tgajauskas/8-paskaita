@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+    font-family: Tahoma;
+    margin: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: gold;
+    font-size: 2em;
+}
+
+h2 {
+    color: gold;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+
+}
+
+.eye {
+    display: inline-block;
+}
+
+.eyeball {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border: 0.5px solid black;
+    background: white;
+    display: inline-block;
+    transform: rotate(45deg);
+    border-radius: 75% 0;
+    position: relative;
+}
+
+.pupil {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    border: 20px solid skyblue;
+    display: block;
+    position: absolute;
+    top: 110px;
+    left: 110px;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.pupil:hover {
+    transform: scale(3);
+    border: 10px solid skyblue;
+    top: 120px;
+    left: 120px;
+}
+
+#back-button {
+    font-family: Tahoma;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2.2em;
+    margin: 10px auto;
+    transition: 300ms;
+    margin-top: 40px;
+    background: linear-gradient(to right, #1CD8D2, #93EDC7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 300ms;
+}
+
+#back-button:hover {
+    transform: scale(1.2);
+}
+
+#keyframes-h2 {
+    margin-top: 60px;
+}
+
+.moon {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: #F5F3CE;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+.moon-phase {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    border-radius: 50%;
+    animation: moonAnimation 8s infinite;
+  }
+  
+@keyframes moonAnimation {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+  }
