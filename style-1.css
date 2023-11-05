@@ -61,21 +61,43 @@ h2 {
 }
 
 #back-button {
-    font-family: Tahoma;
     display: inline-block;
     text-decoration: none;
     font-size: 2.2em;
     margin: 10px auto;
     transition: 300ms;
     margin-top: 40px;
-    background: linear-gradient(to right, #1CD8D2, #93EDC7);
+    background: #FFFFDD;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 300ms;
 }
 
+
+#back-button::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: #FFFFDD;
+    transform: scaleX(0);
+    transform-origin: bottom left top right;
+    transition: all 300ms ease;
+}
+
+
+/* #back-button:hover::after { -- apatines juostos valdymas, palieku isjungta
+    transform: scaleX(1);
+} */
+
 #back-button:hover {
+    background: linear-gradient(to right, #1CD8D2, #93EDC7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transform: scale(1.2);
 }
 
@@ -101,7 +123,8 @@ h2 {
     background-color: #000;
     position: absolute;
     border-radius: 50%;
-    animation: moonAnimation 8s infinite;
+    border-width: none;
+    animation: moonAnimation 20s infinite;
   }
   
 @keyframes moonAnimation {
